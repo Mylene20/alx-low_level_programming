@@ -1,13 +1,20 @@
 #include "main.h"
-#include <unistd.h>
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1
- *On error, -1 is returned, and errno is set appropriately.
+ * _memset - fill a block of memory with a specific value 
+ * @S: starting address of memory to be filled
+ * @b: the desired value
+ * @n: number of bytes to the changed
+ * Return: the changed array with new value for n bytes
  */
-int _putchar(char c)
+char *_memset(char *s, char b, unsigned int n);
 {
-	return (write(1, &c, 1));
+	int i = 0;
+
+	for (; n > 0; i++)
+	{
+		s[i] = b;
+		n--;
+
+	}
+	return (s);
 }
